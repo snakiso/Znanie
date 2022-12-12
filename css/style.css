@@ -1,0 +1,413 @@
+@font-face {
+  font-family: FavoritPro;
+  font-display: swap;
+  src: url("../fonts/FavoritPro-Regular.woff2") format("woff2"), url("../fonts/FavoritPro-Regular.ttf2") format("ttf2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+.main p {
+  font-size: 20px;
+}
+
+.main .wrapper h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 45px 0;
+}
+
+.main .wrapper .ceremony span {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.main .wrapper .ceremony p {
+  margin: 0;
+}
+
+.main .wrapper .ceremony__links {
+  margin-top: 25px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.main .wrapper .ceremony__links a {
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  height: 55px;
+  background-color: rgb(50, 50, 50);
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15), inset 3px -3px 4px rgba(255, 255, 255, 0.25);
+  transition: all 0.3s;
+}
+
+.main .wrapper .ceremony__links a:hover {
+  box-shadow: 0px 0px 0px rgb(0, 0, 0), inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.main .wrapper .site {
+  margin-top: 45px;
+}
+
+.main .wrapper .site a {
+  color: rgb(211, 185, 122);
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.main .wrapper .social {
+  margin-top: 45px;
+}
+
+.main .wrapper .social__links {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+
+.main .wrapper .news {
+  margin-top: 45px;
+}
+
+.main .wrapper .news__block {
+  margin-top: 45px;
+  margin-bottom: 70px;
+}
+
+.main .wrapper .news__block .news__title {
+  cursor: pointer;
+  font-size: 32px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 40px;
+  border-bottom: 1px dashed black;
+  margin-bottom: 35px;
+}
+
+.main .wrapper .news__block .news__title:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  right: 0;
+  top: 8px;
+  transform: rotate(45deg);
+  transition: all 0.3s;
+}
+
+.main .wrapper .news__block .news__title.active:before {
+  transform: rotate(-135deg);
+  top: 15px;
+}
+
+.main .wrapper .news__preloader {
+  visibility: hidden;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -130px;
+  top: 5px;
+}
+
+.main .wrapper .news__preloader.active {
+  visibility: visible;
+}
+
+.main .wrapper .news__content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.main .wrapper .news__box {
+  margin-bottom: 60px;
+  max-width: 1075px;
+}
+
+.main .wrapper .news__box h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.main .wrapper .news__details {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .wrapper .news__date {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  color: rgb(141, 141, 141);
+}
+
+.main .wrapper .news__date span {
+  color: rgb(211, 185, 122);
+}
+
+.main .wrapper .news__link {
+  color: rgb(211, 185, 122);
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-family: FavoritPro;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 331px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 329px) {
+  .main p {
+    font-size: 14px;
+  }
+
+  .main .wrapper h1 {
+    font-size: 22px;
+    text-transform: none;
+    margin: 20px 0 35px 0;
+  }
+
+  .main .wrapper .ceremony span {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .main .wrapper .ceremony__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 35px;
+  }
+
+  .main .wrapper .site a {
+    font-size: 14px;
+  }
+
+  .main .wrapper .news {
+    margin-top: 45px;
+  }
+
+  .main .wrapper .news__block {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  }
+
+  .main .wrapper .news__block .news__title {
+    font-size: 20px;
+  }
+
+  .main .wrapper .news__block .news__title:before {
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 5px;
+  }
+
+  .main .wrapper .news__block .news__title.active:before {
+    top: 10px;
+  }
+
+  .main .wrapper .news__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .main .wrapper .news__box {
+    margin-bottom: 60px;
+    max-width: 1075px;
+  }
+
+  .main .wrapper .news__box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 499px) {
+  .header img {
+    width: 80px;
+    height: 33px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 899px) {
+  .main p {
+    font-size: 18px;
+  }
+
+  .main .wrapper h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 45px 0;
+  }
+
+  .main .wrapper .ceremony span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .main .wrapper .ceremony__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 35px;
+  }
+
+  .main .wrapper .news {
+    margin-top: 45px;
+  }
+
+  .main .wrapper .news__block {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  }
+
+  .main .wrapper .news__block .news__title {
+    font-size: 28px;
+  }
+
+  .main .wrapper .news__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .main .wrapper .news__box {
+    margin-bottom: 60px;
+    max-width: 1075px;
+  }
+
+  .main .wrapper .news__box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 331px) and (max-width: 499px) {
+  .main p {
+    font-size: 16px;
+  }
+
+  .main .wrapper h1 {
+    font-size: 24px;
+    text-transform: none;
+    margin: 20px 0 35px 0;
+  }
+
+  .main .wrapper .ceremony span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .main .wrapper .ceremony__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 35px;
+  }
+
+  .main .wrapper .site a {
+    font-size: 16px;
+  }
+
+  .main .wrapper .news {
+    margin-top: 45px;
+  }
+
+  .main .wrapper .news__block {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  }
+
+  .main .wrapper .news__block .news__title {
+    font-size: 22px;
+  }
+
+  .main .wrapper .news__block .news__title:before {
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 5px;
+  }
+
+  .main .wrapper .news__block .news__title.active:before {
+    top: 10px;
+  }
+
+  .main .wrapper .news__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .main .wrapper .news__box {
+    margin-bottom: 60px;
+    max-width: 1075px;
+  }
+
+  .main .wrapper .news__box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 332px) and (max-width: 899px) {
+  body {
+    background-image: url("../img/mobile-bg.png");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 332px) and (max-width: 499px) {
+  body {
+    background-size: auto !important;
+  }
+
+  .wrapper {
+    max-width: 325px;
+    padding: 0;
+  }
+}
