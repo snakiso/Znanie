@@ -185,6 +185,10 @@ body {
   font-family: FavoritPro;
 }
 
+.loaded {
+  display: none;
+}
+
 .wrapper {
   max-width: 1160px;
   margin: auto;
