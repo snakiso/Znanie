@@ -123,8 +123,9 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  right: -130px;
-  top: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main .wrapper .news__preloader.active {
@@ -132,6 +133,7 @@
 }
 
 .main .wrapper .news__content {
+  position: relative;
   max-height: 0px;
   overflow: hidden;
   transition: all 0.5s;
@@ -139,6 +141,8 @@
 
 .main .wrapper .news__box {
   margin-bottom: 60px;
+  opacity: 0;
+  transition: all 0.3s;
   max-width: 1075px;
 }
 
@@ -249,13 +253,6 @@ a {
     top: 10px;
   }
 
-  .main .wrapper .news__preloader {
-    right: auto;
-    left: 0;
-    top: auto;
-    bottom: -60px;
-  }
-
   .main .wrapper .news__content {
     max-height: 0px;
     overflow: hidden;
@@ -314,13 +311,6 @@ a {
 
   .main .wrapper .news__block .news__title {
     font-size: 28px;
-  }
-
-  .main .wrapper .news__preloader {
-    right: auto;
-    left: 0;
-    top: auto;
-    bottom: -60px;
   }
 
   .main .wrapper .news__content {
@@ -395,13 +385,6 @@ a {
     max-height: 0px;
     overflow: hidden;
     transition: all 0.5s;
-  }
-
-  .main .wrapper .news__preloader {
-    right: auto;
-    left: 0;
-    top: auto;
-    bottom: -60px;
   }
 
   .main .wrapper .news__box {
