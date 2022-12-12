@@ -277,7 +277,59 @@ a {
   }
 }
 
-@media (min-width: 501px) and (max-width: 899px) {
+@media (min-width: 601px) and (max-width: 899px) {
+  .main p {
+    font-size: 18px;
+  }
+
+  .main .wrapper h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 45px 0;
+  }
+
+  .main .wrapper .ceremony span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .main .wrapper .ceremony__links {
+    display: flex;
+    row-gap: 15px;
+    margin-top: 35px;
+  }
+
+  .main .wrapper .news {
+    margin-top: 45px;
+  }
+
+  .main .wrapper .news__block {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  }
+
+  .main .wrapper .news__block .news__title {
+    font-size: 28px;
+  }
+
+  .main .wrapper .news__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .main .wrapper .news__box {
+    margin-bottom: 60px;
+    max-width: 1075px;
+  }
+
+  .main .wrapper .news__box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
   .main p {
     font-size: 18px;
   }
