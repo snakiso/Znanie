@@ -249,6 +249,13 @@ a {
     top: 10px;
   }
 
+  .main .wrapper .news__preloader {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: -60px;
+  }
+
   .main .wrapper .news__content {
     max-height: 0px;
     overflow: hidden;
@@ -307,6 +314,13 @@ a {
 
   .main .wrapper .news__block .news__title {
     font-size: 28px;
+  }
+
+  .main .wrapper .news__preloader {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: -60px;
   }
 
   .main .wrapper .news__content {
@@ -381,6 +395,13 @@ a {
     max-height: 0px;
     overflow: hidden;
     transition: all 0.5s;
+  }
+
+  .main .wrapper .news__preloader {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: -60px;
   }
 
   .main .wrapper .news__box {
