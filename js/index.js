@@ -17,14 +17,19 @@ async function createElem() {
     box.className = 'news__box';
     let h3 = document.createElement("h3");
     h3.className = 'news__name';
+    h3.innerHTML = json[i].Name;
     let p = document.createElement("p");
     p.className = "news__description";
+    p.innerHTML = json[i].Description;
     let details = document.createElement("div");
     details.className = 'news__details';
     let date = document.createElement('div');
     date.className = 'news__date';
+    date.innerHTML = json[i].Date;
     let link = document.createElement('a');
     link.className = 'news__link';
+    link.href = json[i].Link;
+    link.textContent = 'читать далее';
 
 
 
@@ -36,32 +41,11 @@ async function createElem() {
 
     newsContent.appendChild(box);
 
+    preloader.style.visibility = 'hidden';
+    newsContent.style.maxHeight = 'fit-content'
+    opacityBox()
+
   }
-}
-
-createElem()
-
-async function loadNews() {
-
-  let url = `./files/news.json`
-  let response = await fetch(url)
-  let json = await response.json();
-
-  let newsName = document.querySelectorAll('.news__name');
-  let newsDescription = document.querySelectorAll('.news__description');
-  let newsDate = document.querySelectorAll('.news__date');
-  let newsLink = document.querySelectorAll('.news__link');
-
-  for (let i = 0; i < json.length; i++) {
-    newsName[i].innerHTML = json[i].Name;
-    newsDescription[i].innerHTML = json[i].Description;
-    newsDate[i].innerHTML = json[i].Date;
-    newsLink[i].href = json[i].Link;
-    newsLink[i].textContent = "читать далее";
-  }
-  preloader.style.visibility = 'hidden';
-  newsContent.style.maxHeight = 'fit-content'
-  opacityBox()
 }
 
 function preloaderActive() {
@@ -90,7 +74,7 @@ newsBtn.addEventListener('click', () => {
   if (!newsBtn.classList.contains('active')) {
     openNews()
     preloaderActive()
-    loadNews()
+    createElem()
   } else {
     openNews()
   }
